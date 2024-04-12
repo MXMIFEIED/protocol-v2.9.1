@@ -1,0 +1,228 @@
+script_key = "KEY HERE";
+
+getgenv().Protocol = {
+    Main = {
+       ["FindBestServer"] = false, -- connects to server with best ping
+         ["Gui"] = true,
+           ["GuiInfo"] = true,
+              ["AutoLowGFX"] = true, 
+                                ["DisableShadows"] = true, 
+                  ["MuteBoomBox"] = true,
+    },
+    Silent = {
+        ["Enabled"] = true,
+                   ["UseKeybind"] = true,
+        ["Keybind"] = "C",
+                   ["Part"] = "HumanoidRootPart",
+        ["Prediction"] = 0.136,
+                   ["Default"] = 0.136,
+        ["ClosestPart"] = true,
+                   ["ClosestPoint"] = true,
+        ["AntiGroundShots"] = true,
+               ["Checks"] = {
+                  ["DeathCheck"] = true,
+                    ["VisibleCheck"] = true,
+                     ["GrabbedCheck"] = true
+        }
+    },
+    Aimbot = {
+  ["Enabled"] = true,
+  ["Keybind"] = "c",
+   ["Part"] = "HumanoidRootPart",
+    ["UsePrediction"] = true,
+     ["Prediction"] = 0.136,
+      ["FirstPerson"] = true,
+       ["ThirdPerson"] = true,
+        ["Radius"] = 35,
+         ["Smoothness"] = false,
+          ["Amount"] = 0.375,
+           ["ClosestPart"] = true,
+        ["Checks"] = {
+            ["DeathCheck"] = true,
+            ["OwnDeathCheck"] = true,
+            ["WallCheck"] = true
+        }
+    },
+    Resolver = {
+                      ["Enabled"] = true, -- // If you want to resolve anti-locks
+                                        ["Resolve_Desync"] = true,
+            ["Resolve_Underground"] = true,
+                                         ["AntiAimViewer"] = true -- Bypasses serverside mouse position (note: doesnt work on client)
+    },
+    FOV = {
+                 ["Visible"] = false,
+              ["Radius"] = 40,
+                 ["Default"] = 22,
+              ["Color"] = "teal"
+    },
+    Range = {
+        ["Enabled"] = true,
+             ["CloseDistance"] = 37,
+        ["MidDistance"] = 68,
+             ["FarDistance"] = math.huge,
+        ["FOV"] = {
+             ["Enabled"] = false,
+                ["Close"] = 31,
+                     ["Mid"] = 23,
+                           ["Far"] = 15
+        },
+        ["Smoothness"] = {
+              ["Enabled"] = false,
+               ["Close"] = 0.098,
+                 ["Mid"] = 0.068,
+                  ["Far"] = 0.037
+        },
+        ["Prediction"] = {
+            ["Enabled"] = true,
+            ["Close"] = {
+                ["P20_30"] = 0.12542465767834,
+                ["P30_40"] = 0.12742,
+                ["P50_60"] = 0.134543,
+                ["P60_70"] = 0.141,
+                ["P70_80"] = 0.1413,
+                ["P80_90"] = 0.1487,
+                ["P90_120"] = 0.15738,
+                ["P120_140"] = 0.12534,
+                ["P140_200"] = 0.1652131
+            },
+            ["Mid"] = {
+                ["P20_30"] = 0.12588,
+                ["P30_40"] = 0.11,
+                ["P40_50"] = 0.127668,
+                ["P50_60"] = 0.12731,
+                ["P70_80"] = 0.1365,
+                ["P80_90"] = 0.138,
+                ["P90_120"] = 0.157,
+                ["P120_140"] = 0.13432,
+                ["P140_200"] = 0.16779123
+            },
+            ["Far"] = {
+                ["P20_30"] = 0.11120,
+                ["P30_40"] = 0.11120,
+                ["P40_50"] = 0.12542465767834,
+                ["P50_60"] = 0.12921,
+                ["P60_70"] = 0.1311,
+                ["P70_80"] = 0.1311,
+                ["P80_90"] = 0.1311,
+                ["P90_120"] = 0.14325,
+                ["P120_140"] = 0.138876,
+                ["P140_200"] = 0.165455312399999
+            }
+        }
+    },
+    GunFOV =  {
+        ["Enabled"] = true, --// Enables gun fov
+           ["Double-Barrel SG"] = {["FOV"] = 31},
+             ["Revolver"] = {["FOV"] = 22},
+              ["SMG"] = {["FOV"] = 18},
+               ["Shotgun"] = { ["FOV"] = 23},
+                 ["Rifle"] = { ["FOV"] = 12},
+                   ["TacticalShotgun"] = {["FOV"] = 21},
+                    ["Silencer"] = {["FOV"] = 20},
+                     ["AK47"] = { ["FOV"] = 12.5},
+                       ["AR"] = { ["FOV"] = 12.5},
+    },
+    InventorySorter = {
+        ["Enabled"] = false, -- If you want to use the sorter
+            ["Keybind"] = "k", -- Keybind to update your inventory
+              ["List"] = {"[Double-Barrel SG]","[Revolver]","[TacticalShotgun]", "[Shotgun]", "[SMG]"}, -- up to 9
+    },
+    Macro = {
+        ["Enabled"] = true, -- If you want to use macro
+          ["AntiFling"] = true,
+            ["Keybind"] = "x", -- // Keybind to toggle the macro
+              ["Mode"] = "FirstPerson", -- // First person or third person
+                 ["Speed"] = 1.17
+    },
+    AutoPred = {
+        ["Enabled"] = true, -- // If you want to use auto prediction
+        ["Interval"] = 0.2, -- // How fast the auto prediction refreshes
+        ["Silent"] = {
+            ["Enabled"] = true,
+            ["P10"] = 0.11,
+            ["P20"] = 0.12588,
+            ["P30"] = 0.11911,
+            ["P40"] = 0.1256,
+            ["P50"] = 0.12766,
+            ["P60"] = 0.136,
+            ["P70"] = 0.12951,
+            ["P80"] = 0.13181,
+            ["P90"] = 0.13685,
+            ["P100"] = 0.13334,
+            ["P110"] = 0.14552,
+            ["P120"] = 0.1652131,
+            ["P130"] = 0.15669,
+            ["P140"] = 0.15669,
+            ["P150"] = 0.15214,
+            ["P160"] = 0.16262,
+            ["P170"] = 0.19231,
+            ["P180"] = 0.19284,
+            ["P190"] = 0.16594,
+            ["P200"] = 0.16942
+        },
+        ["Aimbot"] = {
+            ["Enabled"] = false,
+            ["P10"] = 0.11,
+            ["P20"] = 0.12588,
+            ["P30"] = 0.11911,
+            ["P40"] = 0.1256,
+            ["P50"] = 0.12766,
+            ["P60"] = 0.136,
+            ["P70"] = 0.12951,
+            ["P80"] = 0.13181,
+            ["P90"] = 0.13685,
+            ["P100"] = 0.13334,
+            ["P110"] = 0.14552,
+            ["P120"] = 0.1652131,
+            ["P130"] = 0.15669,
+            ["P140"] = 0.15669,
+            ["P150"] = 0.15214,
+            ["P160"] = 0.16262,
+            ["P170"] = 0.19231,
+            ["P180"] = 0.19284,
+            ["P190"] = 0.16594,
+            ["P200"] = 0.16942
+        }
+    },
+    Emotes = { -- credits to evolution
+        ["Greet"] = true, ["GreetKey"] = Enum.KeyCode.G,
+           ["Lay"] = true, ["LayKey"] = Enum.KeyCode.T,
+            ["Speed"] = false, ["SpeedKey"] = Enum.KeyCode.N,
+             ["Sturdy"] = false, ["SturdyKey"] = Enum.KeyCode.H,
+              ["Griddy"] = false, ["GriddyKey"] = Enum.KeyCode.G,
+    },
+    MemorySpoofer = {
+        ["MemSpoofer"] = true, -- // If you want to use the memory spoofer
+          ["Minimum"] = 500, -- // Minimum memory to spoof
+            ["Maximum"] = 800, -- // Maximum memory to spoof
+    },
+    PingSpoofer = {
+        ["PingSpoofer"] = false,
+          ["PingTabColor"] = Color3.fromRGB(211, 88, 33),
+            ["Minimum"] = 130,
+              ["Maximum"] = 180
+    },
+    Esp = {
+        ["Enabled"] = false, -- Loads the ESP
+           ["Bounding_Box"] = true, -- Box Base
+            ["Fill_Box"] = false, -- If you want to fill the box
+              ["Fill_Transparency"] = 0.75, -- Box transparency
+               ["Show_Distance"] = false, -- Shows the players distance
+                ["Show_Name"] = true, -- Shows the players name
+                 ["Show_Health"] = true, -- Shows the players health
+                   ["Health_Type"] = "Bar" -- Text, Both 
+    },
+    Blink = { 
+        ["Enabled"] = true,
+              ["BlinkKeybind"] = "N",
+                        ["BlinkDuration"] = 1,
+    },
+    Spin = {
+        ["Toggle"] = true,
+        ["RotationSpeed"] = 2600, -- higher you go the faster the spin. 2500 is good
+        ["Keybind"] = Enum.KeyCode.V
+    }
+}
+
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/abe59eb3d22d9c831a08caabcedfeb25.lua"))()
